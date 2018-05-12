@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>strong与copy | Pinn的小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1.修饰目标 strong修饰可变类型对象；copy修饰拥有对应可变类型的不可变对象,eg:NSString、NSArray、NSDictionary等。 如果NSString、NSArray等使用strong修饰，当其修饰的对象指向一个可变的类型时，被指向的可变对象修改后会影响对应的属性的值。 NSString、NSArray的stringByAppendingString、arrayByAdd">
+<meta name="keywords" content="copy,strong">
+<meta property="og:type" content="article">
+<meta property="og:title" content="strong与copy">
+<meta property="og:url" content="http://yoursite.com/2018/04/22/strong与copy/index.html">
+<meta property="og:site_name" content="Pinn的小站">
+<meta property="og:description" content="1.修饰目标 strong修饰可变类型对象；copy修饰拥有对应可变类型的不可变对象,eg:NSString、NSArray、NSDictionary等。 如果NSString、NSArray等使用strong修饰，当其修饰的对象指向一个可变的类型时，被指向的可变对象修改后会影响对应的属性的值。 NSString、NSArray的stringByAppendingString、arrayByAdd">
+<meta property="og:locale" content="简体中文">
+<meta property="og:updated_time" content="2018-04-23T14:57:23.874Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="strong与copy">
+<meta name="twitter:description" content="1.修饰目标 strong修饰可变类型对象；copy修饰拥有对应可变类型的不可变对象,eg:NSString、NSArray、NSDictionary等。 如果NSString、NSArray等使用strong修饰，当其修饰的对象指向一个可变的类型时，被指向的可变对象修改后会影响对应的属性的值。 NSString、NSArray的stringByAppendingString、arrayByAdd">
+  
+    <link rel="alternate" href="/atom.xml" title="Pinn的小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Pinn的小站</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">好记性不如烂笔头</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-strong与copy" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/22/strong与copy/" class="article-date">
+  <time datetime="2018-04-22T13:53:27.000Z" itemprop="datePublished">2018-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      strong与copy
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-修饰目标"><a href="#1-修饰目标" class="headerlink" title="1.修饰目标"></a>1.修饰目标</h3><ul>
+<li>strong修饰可变类型对象；copy修饰拥有对应可变类型的不可变对象,eg:NSString、NSArray、NSDictionary等。</li>
+<li>如果NSString、NSArray等使用strong修饰，当其修饰的对象指向一个可变的类型时，被指向的可变对象修改后会影响对应的属性的值。</li>
+<li>NSString、NSArray的stringByAppendingString、arrayByAddingObject，@[],@””等方法会返回一个新的不可变对象C，此时如果使用strong或copy修饰对应属性B，当修改属性指向的对象A不会影响属性B的值。因为B的指向没有变化，仅仅是A指针指向了C。</li>
+</ul>
+<h3 id="2-自定义类"><a href="#2-自定义类" class="headerlink" title="2.自定义类"></a>2.自定义类</h3><p>自定义类使用copy修饰需要实现NSCoping协议。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/22/strong与copy/" data-id="cjh3cd0lb0005iguskjonyj3l" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/copy/">copy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/strong/">strong</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/05/12/Git-Pages/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Git-Pages
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/04/21/Night/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Night</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test赫尔/">Test赫尔</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/copy/">copy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/new/">new</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/strong/">strong</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tag1/">tag1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tag2/">tag2</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Test赫尔/" style="font-size: 10px;">Test赫尔</a> <a href="/tags/copy/" style="font-size: 10px;">copy</a> <a href="/tags/new/" style="font-size: 10px;">new</a> <a href="/tags/strong/" style="font-size: 10px;">strong</a> <a href="/tags/tag1/" style="font-size: 10px;">tag1</a> <a href="/tags/tag2/" style="font-size: 10px;">tag2</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/05/12/Git-Pages/">Git-Pages</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/22/strong与copy/">strong与copy</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/21/Night/">Night</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/19/My-new-post/">My new post</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Pinn<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
