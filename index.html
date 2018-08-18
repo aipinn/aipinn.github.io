@@ -312,7 +312,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4">
+      <meta itemprop="image" content="/uploads/avator.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -454,7 +454,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4">
+      <meta itemprop="image" content="/uploads/avator.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -605,7 +605,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4">
+      <meta itemprop="image" content="/uploads/avator.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -767,7 +767,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4">
+      <meta itemprop="image" content="/uploads/avator.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -955,7 +955,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4">
+      <meta itemprop="image" content="/uploads/avator.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1084,7 +1084,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4">
+      <meta itemprop="image" content="/uploads/avator.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1150,7 +1150,7 @@
       
         
           
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/* Send -setObject:forKey: to the receiver, unless the value is nil, in which case send -removeObjectForKey:.</span><br><span class="line">*/</span><br><span class="line">- (void)setValue:(nullable ObjectType)value forKey:(NSString *)key;</span><br><span class="line"></span><br><span class="line">- (void)setObject:(ObjectType)anObject forKey:(KeyType &lt;NSCopying&gt;)aKey;</span><br></pre></td></tr></table></figure>
+            <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Send -setObject:forKey: to the receiver, unless the value is nil, in which case send -removeObjectForKey:.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)setValue:(<span class="keyword">nullable</span> ObjectType)value forKey:(<span class="built_in">NSString</span> *)key;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setObject:(ObjectType)anObject forKey:(KeyType &lt;<span class="built_in">NSCopying</span>&gt;)aKey;</span><br></pre></td></tr></table></figure>
 <ol>
 <li>setObject：forkey：中value不可以为nil，不然会报错。<br>setValue：forKey：中value可以为nil，但是当value为nil的时候，会自动调用removeObject：forKey方法</li>
 <li>setValue：forKey：中key的参数只能是NSString类型，而setObject：forKey：的key可以是任何对象类型</li>
@@ -1210,7 +1210,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4">
+      <meta itemprop="image" content="/uploads/avator.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1280,7 +1280,7 @@
 <p>Objective-C</p>
 </blockquote>
 <p><em>服务器返回字符串@“0”或@“1”表示本地的一个布尔行为，因为BOOL值的疏忽，将返回的字符串赋值给BOOL属性，引起多处布尔状态不一致，导致bug。虽然细小却花费了半个上午的时间才找到原因，特写下此文以提高警惕。</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">NSDictionary * dic = @&#123;@&quot;a&quot;:@0, @&quot;b&quot;:@1, @&quot;c&quot;:@&quot;0&quot;, @&quot;d&quot;:@&quot;1&quot;&#125;;</span><br><span class="line">// 不需要初始化,默认为NO</span><br><span class="line"></span><br><span class="line"> self.ret = dic[@&quot;a&quot;]; // _ret = YES;</span><br><span class="line"> self.ret = [dic[@&quot;a&quot;] boolValue]; // _set = NO;</span><br><span class="line"></span><br><span class="line"> self.ret = dic[@&quot;b&quot;]; // _ret = YES;</span><br><span class="line"> self.ret = [dic[@&quot;b&quot;] boolValue]; // _ret = YES;</span><br><span class="line"></span><br><span class="line"> self.ret = dic[@&quot;c&quot;]; // _ret = YES;</span><br><span class="line"> self.ret = [dic[@&quot;c&quot;] boolValue]; // _ret = NO;</span><br><span class="line"></span><br><span class="line"> self.ret = dic[@&quot;d&quot;]; // _ret = YES;</span><br><span class="line"> self.ret = [dic[@&quot;d&quot;] boolValue]; // _ret = YES;</span><br><span class="line"></span><br><span class="line"> self.ret = 0; // _ret = NO;</span><br><span class="line"></span><br><span class="line"> self.ret = @&quot;0&quot;; // _ret = YES;</span><br><span class="line"></span><br><span class="line"> self.ret = 1; // _ret = YES;</span><br><span class="line"></span><br><span class="line"> self.ret = dic[@&quot;hello&quot;];// _set = NO;</span><br><span class="line"></span><br><span class="line"> self.ret = dic; // _set = YES;</span><br><span class="line"></span><br><span class="line"> self.ret = [NSNull null]; // _ret = YES;</span><br><span class="line"></span><br><span class="line"> self.ret = @&quot;&quot;; // _ret = YES;</span><br><span class="line"></span><br><span class="line"> self.ret = [@&quot;&quot; boolValue]; // _ret = NO;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSDictionary</span> * dic = @&#123;<span class="string">@"a"</span>:@<span class="number">0</span>, <span class="string">@"b"</span>:@<span class="number">1</span>, <span class="string">@"c"</span>:<span class="string">@"0"</span>, <span class="string">@"d"</span>:<span class="string">@"1"</span>&#125;;</span><br><span class="line"><span class="comment">// 不需要初始化,默认为NO</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"a"</span>]; <span class="comment">// _ret = YES;</span></span><br><span class="line"> <span class="keyword">self</span>.ret = [dic[<span class="string">@"a"</span>] boolValue]; <span class="comment">// _set = NO;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"b"</span>]; <span class="comment">// _ret = YES;</span></span><br><span class="line"> <span class="keyword">self</span>.ret = [dic[<span class="string">@"b"</span>] boolValue]; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"c"</span>]; <span class="comment">// _ret = YES;</span></span><br><span class="line"> <span class="keyword">self</span>.ret = [dic[<span class="string">@"c"</span>] boolValue]; <span class="comment">// _ret = NO;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"d"</span>]; <span class="comment">// _ret = YES;</span></span><br><span class="line"> <span class="keyword">self</span>.ret = [dic[<span class="string">@"d"</span>] boolValue]; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = <span class="number">0</span>; <span class="comment">// _ret = NO;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = <span class="string">@"0"</span>; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = <span class="number">1</span>; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"hello"</span>];<span class="comment">// _set = NO;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic; <span class="comment">// _set = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = [<span class="built_in">NSNull</span> null]; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = <span class="string">@""</span>; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = [<span class="string">@""</span> boolValue]; <span class="comment">// _ret = NO;</span></span><br></pre></td></tr></table></figure>
 <h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><ul>
 <li>如果等号右边是:非空对象,数字1,则BOOL值为真,即YES;</li>
 <li>如果等号右边是:0,nil则BOOL为假,即NO;<blockquote>
@@ -1341,7 +1341,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4">
+      <meta itemprop="image" content="/uploads/avator.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1484,7 +1484,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="https://avatars3.githubusercontent.com/u/16027318?s=460&v=4"
+                src="/uploads/avator.gif"
                 alt="Pinn" />
             
               <p class="site-author-name" itemprop="name">Pinn</p>
