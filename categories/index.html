@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="copy,strong," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="1.修饰目标 strong修饰可变类型对象；copy修饰拥有对应可变类型的不可变对象,eg:NSString、NSArray、NSDictionary等。 如果NSString、NSArray等使用strong修饰，当其修饰的对象指向一个可变的类型时，被指向的可变对象修改后会影响对应的属性的值。 NSString、NSArray的stringByAppendingString、arrayByAdd">
-<meta name="keywords" content="copy,strong">
-<meta property="og:type" content="article">
-<meta property="og:title" content="strong与copy">
-<meta property="og:url" content="http://aipinn.com/2018/04/22/strong与copy/index.html">
+<meta name="description" content="这是很有哲理的一句话">
+<meta name="keywords" content="关键字啊。。。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="categories">
+<meta property="og:url" content="http://aipinn.com/categories/index.html">
 <meta property="og:site_name" content="Pinnの小站">
-<meta property="og:description" content="1.修饰目标 strong修饰可变类型对象；copy修饰拥有对应可变类型的不可变对象,eg:NSString、NSArray、NSDictionary等。 如果NSString、NSArray等使用strong修饰，当其修饰的对象指向一个可变的类型时，被指向的可变对象修改后会影响对应的属性的值。 NSString、NSArray的stringByAppendingString、arrayByAdd">
+<meta property="og:description" content="这是很有哲理的一句话">
 <meta property="og:locale" content="简体中文">
-<meta property="og:updated_time" content="2018-04-23T14:57:23.874Z">
+<meta property="og:updated_time" content="2018-08-18T08:06:31.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="strong与copy">
-<meta name="twitter:description" content="1.修饰目标 strong修饰可变类型对象；copy修饰拥有对应可变类型的不可变对象,eg:NSString、NSArray、NSDictionary等。 如果NSString、NSArray等使用strong修饰，当其修饰的对象指向一个可变的类型时，被指向的可变对象修改后会影响对应的属性的值。 NSString、NSArray的stringByAppendingString、arrayByAdd">
+<meta name="twitter:title" content="categories">
+<meta name="twitter:description" content="这是很有哲理的一句话">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://aipinn.com/2018/04/22/strong与copy/"/>
+  <link rel="canonical" href="http://aipinn.com/categories/"/>
 
 
 
 
 
-  <title>strong与copy | Pinnの小站</title>
+  <title>categories | Pinnの小站</title>
   
 
 
@@ -285,190 +285,40 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/04/22/strong与copy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Pinn">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatarhs.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pinnの小站">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h2 class="post-title" itemprop="name headline">strong与copy</h2>
-        
+	<h2 class="post-title" itemprop="name headline">categories</h2>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-22T21:53:27+08:00">
-                2018-04-22
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/22/strong与copy/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/04/22/strong与copy/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <h3 id="1-修饰目标"><a href="#1-修饰目标" class="headerlink" title="1.修饰目标"></a>1.修饰目标</h3><ul>
-<li>strong修饰可变类型对象；copy修饰拥有对应可变类型的不可变对象,eg:NSString、NSArray、NSDictionary等。</li>
-<li>如果NSString、NSArray等使用strong修饰，当其修饰的对象指向一个可变的类型时，被指向的可变对象修改后会影响对应的属性的值。</li>
-<li>NSString、NSArray的stringByAppendingString、arrayByAddingObject，@[],@””等方法会返回一个新的不可变对象C，此时如果使用strong或copy修饰对应属性B，当修改属性指向的对象A不会影响属性B的值。因为B的指向没有变化，仅仅是A指针指向了C。</li>
-</ul>
-<h3 id="2-自定义类"><a href="#2-自定义类" class="headerlink" title="2.自定义类"></a>2.自定义类</h3><p>自定义类使用copy修饰需要实现NSCoping协议。</p>
-
+      <div class="post-body han-init-context">
+        
+        
+          <div class="category-all-page">
+            <div class="category-all-title">
+                1 category in total
+            </div>
+            <div class="category-all">
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/shell/">shell</a><span class="category-list-count">4</span></li></ul>
+            </div>
+          </div>
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>打赏</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>Donate</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Pinn WeChat Pay"/>
-        <p>WeChat Pay</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="Pinn Alipay"/>
-        <p>Alipay</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/copy/" rel="tag"># copy</a>
-          
-            <a href="/tags/strong/" rel="tag"># strong</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/24/BOOL引起的问题/" rel="prev" title="BOOL值引起的bug">
-                BOOL值引起的bug <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -508,17 +358,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -592,22 +433,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-修饰目标"><span class="nav-number">1.</span> <span class="nav-text">1.修饰目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-自定义类"><span class="nav-number">2.</span> <span class="nav-text">2.自定义类</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
