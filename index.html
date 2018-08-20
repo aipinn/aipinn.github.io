@@ -447,6 +447,173 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/07/20/OC消息转发/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pinn">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avator.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pinnの小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/20/OC消息转发/" itemprop="url">Objective-C消息转发</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-20T21:40:35+08:00">
+                2018-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/20/OC消息转发/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/07/20/OC消息转发/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Objective-C消息转发"><a href="#Objective-C消息转发" class="headerlink" title="Objective-C消息转发"></a>Objective-C消息转发</h1><blockquote>
+<p>static building-静态绑定，即：编译期就能决定运行时所应调用的函数，函数地址实际上是硬编码在指令中。<br>dynamic building-动态绑定，即：所调用的函数在运行时期才能确定。</p>
+</blockquote>
+<h2 id="void-objc-msgSend-id-SEL-cmd-…"><a href="#void-objc-msgSend-id-SEL-cmd-…" class="headerlink" title="void objc_msgSend(id, SEL cmd, …)"></a>void objc_msgSend(id, SEL cmd, …)</h2><p>发送消息的过程：</p>
+<ol>
+<li>第一步：接收者所属的类方法列表（list of methods）</li>
+<li>第二步：沿着继承体系继续往上找（搜索树，从下到上，从左到右?是吗😶）</li>
+<li><p>第三步：消息转发（message forwarding）</p>
+<p> 这样的步骤去调用一个方法需要调用很多步骤，但是，objc_msgSend函数会 将匹配结果缓存到“快速映射表”（fast map）中，每个类都有这样一个缓存，若是稍后还会执行此方法就直接在缓存表中取出。</p>
+</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/20/OC消息转发/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/07/16/shell函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -624,7 +791,7 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/16/shell重定向/" itemprop="url">shell 流程控制</a></h2>
+                <a class="post-title-link" href="/2018/07/16/shell重定向/" itemprop="url">shell重定向</a></h2>
         
 
         <div class="post-meta">
@@ -636,7 +803,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T20:20:54+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T21:20:54+08:00">
                 2018-07-16
               </time>
             
@@ -1697,148 +1864,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/04/24/BOOL引起的问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Pinn">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avator.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pinnの小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/24/BOOL引起的问题/" itemprop="url">BOOL值引起的bug</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-24T15:45:23+08:00">
-                2018-04-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/24/BOOL引起的问题/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/04/24/BOOL引起的问题/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>Objective-C</p>
-</blockquote>
-<p><em>服务器返回字符串@“0”或@“1”表示本地的一个布尔行为，因为BOOL值的疏忽，将返回的字符串赋值给BOOL属性，引起多处布尔状态不一致，导致bug。虽然细小却花费了半个上午的时间才找到原因，特写下此文以提高警惕。</em></p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSDictionary</span> * dic = @&#123;<span class="string">@"a"</span>:@<span class="number">0</span>, <span class="string">@"b"</span>:@<span class="number">1</span>, <span class="string">@"c"</span>:<span class="string">@"0"</span>, <span class="string">@"d"</span>:<span class="string">@"1"</span>&#125;;</span><br><span class="line"><span class="comment">// 不需要初始化,默认为NO</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"a"</span>]; <span class="comment">// _ret = YES;</span></span><br><span class="line"> <span class="keyword">self</span>.ret = [dic[<span class="string">@"a"</span>] boolValue]; <span class="comment">// _set = NO;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"b"</span>]; <span class="comment">// _ret = YES;</span></span><br><span class="line"> <span class="keyword">self</span>.ret = [dic[<span class="string">@"b"</span>] boolValue]; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"c"</span>]; <span class="comment">// _ret = YES;</span></span><br><span class="line"> <span class="keyword">self</span>.ret = [dic[<span class="string">@"c"</span>] boolValue]; <span class="comment">// _ret = NO;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"d"</span>]; <span class="comment">// _ret = YES;</span></span><br><span class="line"> <span class="keyword">self</span>.ret = [dic[<span class="string">@"d"</span>] boolValue]; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = <span class="number">0</span>; <span class="comment">// _ret = NO;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = <span class="string">@"0"</span>; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = <span class="number">1</span>; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic[<span class="string">@"hello"</span>];<span class="comment">// _set = NO;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = dic; <span class="comment">// _set = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = [<span class="built_in">NSNull</span> null]; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = <span class="string">@""</span>; <span class="comment">// _ret = YES;</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">self</span>.ret = [<span class="string">@""</span> boolValue]; <span class="comment">// _ret = NO;</span></span><br></pre></td></tr></table></figure>
-<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><ul>
-<li>如果等号右边是:非空对象,数字1,则BOOL值为真,即YES;</li>
-<li>如果等号右边是:0,nil则BOOL为假,即NO;<blockquote>
-<p>(OC中BOOL值，对象存在即为真，不存在即为假。数值0为假，1为真。)</p>
-</blockquote>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1893,7 +1918,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1915,7 +1940,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

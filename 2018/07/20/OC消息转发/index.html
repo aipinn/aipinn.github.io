@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="shell," />
+  <meta name="keywords" content="OC，消息转发，运行时," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="shell重定向  命令 —    说明   command &amp;gt; file    将输出重定向到 file。command &amp;lt; file    将输入重定向到 file。command &amp;gt;&amp;gt; file    将输出以追加的方式重定向到 file。n &amp;gt; file             将文件描述符为 n 的文件重定向到 file。n &amp;gt;&amp;gt; file">
-<meta name="keywords" content="shell">
+<meta name="description" content="Objective-C消息转发 static building-静态绑定，即：编译期就能决定运行时所应调用的函数，函数地址实际上是硬编码在指令中。dynamic building-动态绑定，即：所调用的函数在运行时期才能确定。  void objc_msgSend(id, SEL cmd, …)发送消息的过程：  第一步：接收者所属的类方法列表（list of methods） 第二步：沿着继承体">
+<meta name="keywords" content="OC，消息转发，运行时">
 <meta property="og:type" content="article">
-<meta property="og:title" content="shell重定向">
-<meta property="og:url" content="http://aipinn.com/2018/07/16/shell重定向/index.html">
+<meta property="og:title" content="Objective-C消息转发">
+<meta property="og:url" content="http://aipinn.com/2018/07/20/OC消息转发/index.html">
 <meta property="og:site_name" content="Pinnの小站">
-<meta property="og:description" content="shell重定向  命令 —    说明   command &amp;gt; file    将输出重定向到 file。command &amp;lt; file    将输入重定向到 file。command &amp;gt;&amp;gt; file    将输出以追加的方式重定向到 file。n &amp;gt; file             将文件描述符为 n 的文件重定向到 file。n &amp;gt;&amp;gt; file">
+<meta property="og:description" content="Objective-C消息转发 static building-静态绑定，即：编译期就能决定运行时所应调用的函数，函数地址实际上是硬编码在指令中。dynamic building-动态绑定，即：所调用的函数在运行时期才能确定。  void objc_msgSend(id, SEL cmd, …)发送消息的过程：  第一步：接收者所属的类方法列表（list of methods） 第二步：沿着继承体">
 <meta property="og:locale" content="简体中文">
-<meta property="og:updated_time" content="2018-08-20T12:44:47.221Z">
+<meta property="og:updated_time" content="2018-08-20T13:29:41.655Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="shell重定向">
-<meta name="twitter:description" content="shell重定向  命令 —    说明   command &amp;gt; file    将输出重定向到 file。command &amp;lt; file    将输入重定向到 file。command &amp;gt;&amp;gt; file    将输出以追加的方式重定向到 file。n &amp;gt; file             将文件描述符为 n 的文件重定向到 file。n &amp;gt;&amp;gt; file">
+<meta name="twitter:title" content="Objective-C消息转发">
+<meta name="twitter:description" content="Objective-C消息转发 static building-静态绑定，即：编译期就能决定运行时所应调用的函数，函数地址实际上是硬编码在指令中。dynamic building-动态绑定，即：所调用的函数在运行时期才能确定。  void objc_msgSend(id, SEL cmd, …)发送消息的过程：  第一步：接收者所属的类方法列表（list of methods） 第二步：沿着继承体">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://aipinn.com/2018/07/16/shell重定向/"/>
+  <link rel="canonical" href="http://aipinn.com/2018/07/20/OC消息转发/"/>
 
 
 
 
 
-  <title>shell重定向 | Pinnの小站</title>
+  <title>Objective-C消息转发 | Pinnの小站</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/07/16/shell重定向/">
+    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/07/20/OC消息转发/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
@@ -304,7 +304,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">shell重定向</h2>
+          <h2 class="post-title" itemprop="name headline">Objective-C消息转发</h2>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T21:20:54+08:00">
-                2018-07-16
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-20T21:40:35+08:00">
+                2018-07-20
               </time>
             
 
@@ -339,8 +339,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/shell/" itemprop="url" rel="index">
-                    <span itemprop="name">shell</span>
+                  <a href="/categories/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
                   </a>
                 </span>
 
@@ -357,9 +357,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/07/16/shell重定向/#comments" itemprop="discussionUrl">
+                <a href="/2018/07/20/OC消息转发/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/07/16/shell重定向/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/07/20/OC消息转发/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -387,30 +387,31 @@
       
 
       
-        <h1 id="shell重定向"><a href="#shell重定向" class="headerlink" title="shell重定向"></a>shell重定向</h1><blockquote>
-<ul>
-<li>命令 —    说明</li>
-</ul>
+        <h1 id="Objective-C消息转发"><a href="#Objective-C消息转发" class="headerlink" title="Objective-C消息转发"></a>Objective-C消息转发</h1><blockquote>
+<p>static building-静态绑定，即：编译期就能决定运行时所应调用的函数，函数地址实际上是硬编码在指令中。<br>dynamic building-动态绑定，即：所调用的函数在运行时期才能确定。</p>
 </blockquote>
-<p>command &gt; file    将输出重定向到 file。<br>command &lt; file    将输入重定向到 file。<br>command &gt;&gt; file    将输出以追加的方式重定向到 file。<br>n &gt; file             将文件描述符为 n 的文件重定向到 file。<br>n &gt;&gt; file       将文件描述符为 n 的文件以追加的方式重定向到 file。<br>n &gt;&amp; m             将输出文件 m 和 n 合并。<br>n &lt;&amp; m             将输入文件 m 和 n 合并。<br>&lt;&lt; tag             将开始标记 tag 和结束标记 tag 之间的内容作为输入。</p>
+<h2 id="void-objc-msgSend-id-SEL-cmd-…"><a href="#void-objc-msgSend-id-SEL-cmd-…" class="headerlink" title="void objc_msgSend(id, SEL cmd, …)"></a>void objc_msgSend(id, SEL cmd, …)</h2><p>发送消息的过程：</p>
+<ol>
+<li>第一步：接收者所属的类方法列表（list of methods）</li>
+<li>第二步：沿着继承体系继续往上找（搜索树，从下到上，从左到右?是吗😶）</li>
+<li><p>第三步：消息转发（message forwarding）</p>
+<p> 这样的步骤去调用一个方法需要调用很多步骤，但是，objc_msgSend函数会 将匹配结果缓存到“快速映射表”（fast map）中，每个类都有这样一个缓存，若是稍后还会执行此方法就直接在缓存表中取出。</p>
+</li>
+</ol>
 <a id="more"></a>
-<blockquote>
-<ul>
-<li>重定向深入讲解</li>
+<h4 id="消息转发分为两大阶段"><a href="#消息转发分为两大阶段" class="headerlink" title="消息转发分为两大阶段"></a>消息转发分为两大阶段</h4><ul>
+<li>第一阶段：先征询接收者所属的类，看其能否动态添加方法，以处理当前这个未知的选择子，即动态方法解析（dynamic method resolution）</li>
 </ul>
-</blockquote>
-<p>一般情况下，每个 Unix/Linux 命令运行时都会打开三个文件：<br>标准输入文件(stdin)：stdin的文件描述符为0，Unix程序默认从stdin读取数据。<br>标准输出文件(stdout)：stdout 的文件描述符为1，Unix程序默认向stdout输出数据。<br>标准错误文件(stderr)：stderr的文件描述符为2，Unix程序会向stderr流中写入错误信息。<br>默认情况下，command &gt; file 将 stdout 重定向到 file，command &lt; file 将stdin 重定向到 file。</p>
-<blockquote>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> dynamicMethod(<span class="keyword">id</span> <span class="keyword">self</span>, SEL _cmd)&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"add doing"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//动态方法解析</span></span><br><span class="line">+ (<span class="built_in">BOOL</span>)resolveInstanceMethod:(SEL)sel&#123;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">(lldb) po sel</span></span><br><span class="line"><span class="comment">"doSomething"</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">    <span class="keyword">if</span> ([<span class="built_in">NSStringFromSelector</span>(sel) isEqualToString:<span class="string">@"doSomething"</span>]) &#123;<span class="comment">//此处可以根据情况自定义条件</span></span><br><span class="line">        <span class="comment">//关于"v@:" 参考:https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html</span></span><br><span class="line">        class_addMethod(<span class="keyword">self</span>, sel, (IMP)dynamicMethod, <span class="string">"v@:"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> [<span class="keyword">super</span> resolveInstanceMethod:sel];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <ul>
-<li>Here Document</li>
+<li>第二阶段：此阶段涉及完整的消息转发机制（full forwarding mechanism）<br>  此阶段分为两个小阶段：<ul>
+<li><code>forwardingTargetForSelector:</code> 如果返回消息接收的对象则转发结束，如果返回self或者nil，进入下一阶段</li>
+<li><code>forwardInvocation:</code>在此是消息转发的最后阶段</li>
 </ul>
-</blockquote>
-<p>1.基本形式：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">command &lt;&lt; delimiter</span><br><span class="line">    document #内容</span><br><span class="line">delimiter</span><br></pre></td></tr></table></figure></p>
-<p><em>注意：<br>结尾的delimiter 一定要顶格写，前面不能有任何字符，后面也不能有任何字符，包括空格和 tab 缩进。<br>开始的delimiter前后的空格会被忽略掉。</em><br>2.也可以将 Here Document 用在脚本中，例如:<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt; EOF</span><br><span class="line">欢迎来到xxx</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure></p>
-<p>执行脚本输出结果：<br>欢迎来到xxx</p>
-<ul>
-<li>/dev/null 文件<br>如果希望执行某个命令，但又不希望在屏幕上显示输出结果，那么可以将输出重定向到 /dev/null：<br>$ command &gt; /dev/null</li>
+</li>
 </ul>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//备援接收者</span></span><br><span class="line">- (<span class="keyword">id</span>)forwardingTargetForSelector:(SEL)aSelector&#123;</span><br><span class="line">    PNMsgForward * forward = [PNMsgForward new];</span><br><span class="line">    <span class="keyword">return</span> forward;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> 完整的消息转发机制</span></span><br><span class="line"><span class="comment"> 1.必须实现方法签名</span></span><br><span class="line"><span class="comment"> 2.进行消息转发</span></span><br><span class="line"><span class="comment"> 注意:如果此处只是进行消息的原样转发,可以直接使用备援接收者实现:</span></span><br><span class="line"><span class="comment"> 此处的最重要的作用是可以改变消息参数或者改变selector甚至吞并消息(forwardInvocation:中不invoke方法)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">- (<span class="keyword">void</span>)forwardInvocation:(<span class="built_in">NSInvocation</span> *)anInvocation&#123;</span><br><span class="line">    PNMsgForward * forward = [PNMsgForward new];</span><br><span class="line">    <span class="keyword">if</span> ([forward respondsToSelector:anInvocation.selector])</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"Nothing"</span>);</span><br><span class="line">        <span class="comment">//下句注释后接收的消息会被吞并，不会报错也没有任何结果</span></span><br><span class="line">        [anInvocation invokeWithTarget:forward];</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        [<span class="keyword">super</span> forwardInvocation:anInvocation];</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSMethodSignature</span>*)methodSignatureForSelector:(SEL)selector</span><br><span class="line">&#123;</span><br><span class="line">    PNMsgForward * forward = [PNMsgForward new];</span><br><span class="line">    <span class="built_in">NSMethodSignature</span>* signature = [<span class="keyword">super</span> methodSignatureForSelector:selector];</span><br><span class="line">    <span class="keyword">if</span> (!signature) &#123;</span><br><span class="line">        signature = [forward methodSignatureForSelector:selector];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> signature;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>备注：此处实现是在分类实现的；完整转发阶段临时创建了两个对象作为消息接收者或参数</strong></p>
 
       
     </div>
@@ -457,7 +458,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/shell/" rel="tag"># shell</a>
+            <a href="/tags/OC，消息转发，运行时/" rel="tag"># OC，消息转发，运行时</a>
           
         </div>
       
@@ -470,8 +471,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/15/shell流程控制/" rel="next" title="shell 流程控制">
-                <i class="fa fa-chevron-left"></i> shell 流程控制
+              <a href="/2018/07/16/shell函数/" rel="next" title="shell函数">
+                <i class="fa fa-chevron-left"></i> shell函数
               </a>
             
           </div>
@@ -480,8 +481,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/16/shell函数/" rel="prev" title="shell函数">
-                shell函数 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/14/Block解析/" rel="prev" title="Block详细解析">
+                Block详细解析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -644,7 +645,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#shell重定向"><span class="nav-number">1.</span> <span class="nav-text">shell重定向</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Objective-C消息转发"><span class="nav-number">1.</span> <span class="nav-text">Objective-C消息转发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#void-objc-msgSend-id-SEL-cmd-…"><span class="nav-number">1.1.</span> <span class="nav-text">void objc_msgSend(id, SEL cmd, …)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#消息转发分为两大阶段"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">消息转发分为两大阶段</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -816,9 +817,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://aipinn.com/2018/07/16/shell重定向/';
-          this.page.identifier = '2018/07/16/shell重定向/';
-          this.page.title = 'shell重定向';
+          this.page.url = 'http://aipinn.com/2018/07/20/OC消息转发/';
+          this.page.identifier = '2018/07/20/OC消息转发/';
+          this.page.title = 'Objective-C消息转发';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://pinn.disqus.com/embed.js';
