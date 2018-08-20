@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="KVC，私有属性，运行时，runtime," />
+  <meta name="keywords" content="shell," />
 
 
 
@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="引入运行时头文件 #import &amp;lt;objc/runtime.h&amp;gt; #import &amp;lt;objc/objc.h&amp;gt;  使用运行时获取类的属性，通过KVC访问类的内部属性。">
-<meta name="keywords" content="KVC，私有属性，运行时，runtime">
+<meta name="description" content="shell 函数语法： 12345678#function、参数、返回值都是可选的#参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。[ function ] funname[ ( ) ] &amp;#123;    action;    [ return int;]&amp;#125;">
+<meta name="keywords" content="shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="KVC、运行时结合访问类的属性">
-<meta property="og:url" content="http://aipinn.com/2018/04/28/KVC访问类的属性/index.html">
+<meta property="og:title" content="shell函数">
+<meta property="og:url" content="http://aipinn.com/2018/07/16/shell函数/index.html">
 <meta property="og:site_name" content="Pinnの小站">
-<meta property="og:description" content="引入运行时头文件 #import &amp;lt;objc/runtime.h&amp;gt; #import &amp;lt;objc/objc.h&amp;gt;  使用运行时获取类的属性，通过KVC访问类的内部属性。">
+<meta property="og:description" content="shell 函数语法： 12345678#function、参数、返回值都是可选的#参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。[ function ] funname[ ( ) ] &amp;#123;    action;    [ return int;]&amp;#125;">
 <meta property="og:locale" content="简体中文">
-<meta property="og:updated_time" content="2018-08-18T09:25:00.941Z">
+<meta property="og:updated_time" content="2018-08-20T12:38:06.451Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KVC、运行时结合访问类的属性">
-<meta name="twitter:description" content="引入运行时头文件 #import &amp;lt;objc/runtime.h&amp;gt; #import &amp;lt;objc/objc.h&amp;gt;  使用运行时获取类的属性，通过KVC访问类的内部属性。">
+<meta name="twitter:title" content="shell函数">
+<meta name="twitter:description" content="shell 函数语法： 12345678#function、参数、返回值都是可选的#参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。[ function ] funname[ ( ) ] &amp;#123;    action;    [ return int;]&amp;#125;">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://aipinn.com/2018/04/28/KVC访问类的属性/"/>
+  <link rel="canonical" href="http://aipinn.com/2018/07/16/shell函数/"/>
 
 
 
 
 
-  <title>KVC、运行时结合访问类的属性 | Pinnの小站</title>
+  <title>shell函数 | Pinnの小站</title>
   
 
 
@@ -287,7 +287,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/04/28/KVC访问类的属性/">
+    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/07/16/shell函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Pinn">
@@ -304,7 +304,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">KVC、运行时结合访问类的属性</h2>
+          <h2 class="post-title" itemprop="name headline">shell函数</h2>
         
 
         <div class="post-meta">
@@ -316,8 +316,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-28T12:15:24+08:00">
-                2018-04-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T21:35:15+08:00">
+                2018-07-16
               </time>
             
 
@@ -327,6 +327,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/shell/" itemprop="url" rel="index">
+                    <span itemprop="name">shell</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -335,9 +357,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/28/KVC访问类的属性/#comments" itemprop="discussionUrl">
+                <a href="/2018/07/16/shell函数/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/04/28/KVC访问类的属性/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/07/16/shell函数/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -365,13 +387,11 @@
       
 
       
-        <blockquote>
-<p>引入运行时头文件</p>
-<p>#import &lt;objc/runtime.h&gt;</p>
-<p>#import &lt;objc/objc.h&gt;</p>
-</blockquote>
-<h6 id="使用运行时获取类的属性，通过KVC访问类的内部属性。"><a href="#使用运行时获取类的属性，通过KVC访问类的内部属性。" class="headerlink" title="使用运行时获取类的属性，通过KVC访问类的内部属性。"></a>使用运行时获取类的属性，通过KVC访问类的内部属性。</h6><a id="more"></a>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">UISearchBar</span> * searchBar = [[<span class="built_in">UISearchBar</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">100</span>, <span class="number">300</span>, <span class="number">100</span>)];</span><br><span class="line">[<span class="keyword">self</span>.view addSubview:searchBar];</span><br><span class="line"><span class="comment">// 公开的属性</span></span><br><span class="line">searchBar.placeholder = <span class="string">@"默认文字"</span>;</span><br><span class="line">searchBar.prompt = <span class="string">@"prompt..."</span>;</span><br><span class="line">searchBar.tintColor = [<span class="built_in">UIColor</span> yellowColor];<span class="comment">// 光标的颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//1. 运行时获取所有成员变量以及对应的类型</span></span><br><span class="line"><span class="comment">//存在一个UISearchBarTextField类的变量_searchField,猜测应该是显示文字的</span></span><br><span class="line">[<span class="keyword">self</span> getIvarsClassString:<span class="built_in">NSStringFromClass</span>(<span class="built_in">UISearchBar</span>.class)];</span><br><span class="line"><span class="comment">// UISearchBarTextField本身没有找到相关的属性</span></span><br><span class="line">[<span class="keyword">self</span> getIvarsClassString:<span class="string">@"UISearchBarTextField"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//2. 运行时获取指定字符串对应的类的父类:UITextField</span></span><br><span class="line">Class cls = class_getSuperclass(<span class="built_in">NSClassFromString</span>(<span class="string">@"UISearchBarTextField"</span>));</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, cls);</span><br><span class="line"><span class="comment">//3. 通过上一步可知UISearchBarTextField的父类为UITextField</span></span><br><span class="line"><span class="built_in">UITextField</span> * field = [searchBar valueForKey:<span class="string">@"_searchField"</span>];</span><br><span class="line">field.font = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">14.0</span>];</span><br><span class="line">field.textColor = [<span class="built_in">UIColor</span> orangeColor];</span><br><span class="line"><span class="comment">//4. 同理可以获取UTextField的站位label:_placeholderLabel.textColor</span></span><br><span class="line">[field setValue:[<span class="built_in">UIColor</span> greenColor] forKeyPath:<span class="string">@"_placeholderLabel.textColor"</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">//5. 3,4可以合并,释放注释查看</span></span><br><span class="line"><span class="comment">//[searchBar setValue:[UIColor purpleColor] forKeyPath:@"_searchField.placeholderLabel.textColor"];</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 运行时获取类的所有成员变量</span></span><br><span class="line">- (<span class="keyword">void</span>)getIvarsClassString:(<span class="built_in">NSString</span> *)clsName&#123;</span><br><span class="line">    <span class="keyword">if</span> (!clsName) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">unsigned</span> <span class="keyword">int</span> ivarCount = <span class="number">0</span>;</span><br><span class="line"> <span class="comment">/*</span></span><br><span class="line"><span class="comment"> An array of pointers of type Ivar describing the instance variables declared by the class. Any instance variables declared by superclasses are not included. 只返回本类的成员变量，不包含父类的。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">    Ivar * ivars =  class_copyIvarList(<span class="built_in">NSClassFromString</span>(clsName), &amp;ivarCount);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">unsigned</span> <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ivarCount; i++) &#123;</span><br><span class="line">        Ivar ivar = ivars[i];</span><br><span class="line">        <span class="built_in">NSString</span> * name = [<span class="built_in">NSString</span> stringWithUTF8String:ivar_getName(ivar)];</span><br><span class="line">        <span class="built_in">NSString</span> * type = [<span class="built_in">NSString</span> stringWithUTF8String:ivar_getTypeEncoding(ivar)];</span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"ap--name:%@ type:%@"</span>,name, type);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h1 id="shell-函数"><a href="#shell-函数" class="headerlink" title="shell 函数"></a>shell 函数</h1><p>语法：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>function、参数、返回值都是可选的</span><br><span class="line"><span class="meta">#</span>参数返回，可以显示加：return 返回，如果不加，将以最后一条命令运行结果，作为返回值。</span><br><span class="line">[ function ] funname[ ( ) ] </span><br><span class="line">&#123;</span><br><span class="line">    action;</span><br><span class="line">    [ return int;]</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">bash-3.2$ cat function.sh</span><br><span class="line">:w#!/bin/sh</span><br><span class="line"></span><br><span class="line">echo "shell 函数"</span><br><span class="line"></span><br><span class="line">SampleFun()&#123;</span><br><span class="line">	echo "simplest function"</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">SampleFun</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>一个简单的加法函数</span><br><span class="line">AddFun()&#123;</span><br><span class="line">echo "请输入两个整数，用空格隔开"</span><br><span class="line">read var1 var2</span><br><span class="line">return $(($var1 + $var2))</span><br><span class="line">&#125;</span><br><span class="line">AddFun</span><br><span class="line"><span class="meta">#</span>函数的返回值，在函数调用后通过使用$?接收函数的返回值</span><br><span class="line">echo "$var1+$var2=$?"</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>函数的参数</span><br><span class="line"><span class="meta">#</span>获取第十位及其以上参数时需要使用$&#123;n&#125;</span><br><span class="line">NewFun()&#123;</span><br><span class="line">echo "第1个参数为$1"</span><br><span class="line">echo "第2个参数为$2"</span><br><span class="line">echo "第10个参数为$10"</span><br><span class="line">echo "第10个参数为$&#123;10&#125;"</span><br><span class="line">echo "第11个参数为$&#123;11&#125;"</span><br><span class="line">echo "传入了$#个参数"</span><br><span class="line">echo "传入的参数分别为:$*"</span><br><span class="line">&#125;</span><br><span class="line">NewFun 1 2 3 4 5 6 7 8 9 100 200 300</span><br><span class="line"></span><br><span class="line">bash-3.2$ . function.sh</span><br><span class="line">bash: :w#!/bin/sh: No such file or directory</span><br><span class="line">shell 函数</span><br><span class="line">simplest function</span><br><span class="line">请输入两个整数，用空格隔开</span><br><span class="line">12 43</span><br><span class="line">12+43=55</span><br><span class="line">第1个参数为1</span><br><span class="line">第2个参数为2</span><br><span class="line">第10个参数为10</span><br><span class="line">第10个参数为100</span><br><span class="line">第11个参数为200</span><br><span class="line">传入了12个参数</span><br><span class="line">传入的参数分别为:1 2 3 4 5 6 7 8 9 100 200 300</span><br><span class="line">bash-3.2$</span><br></pre></td></tr></table></figure>
+<p><a href="media/15317906191100/function.sh">function</a></p>
 
       
     </div>
@@ -418,7 +438,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/KVC，私有属性，运行时，runtime/" rel="tag"># KVC，私有属性，运行时，runtime</a>
+            <a href="/tags/shell/" rel="tag"># shell</a>
           
         </div>
       
@@ -431,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/25/setObject和setValue的区别/" rel="next" title="字典的setObject与setValue的区别">
-                <i class="fa fa-chevron-left"></i> 字典的setObject与setValue的区别
+              <a href="/2018/07/16/shell重定向/" rel="next" title="shell 流程控制">
+                <i class="fa fa-chevron-left"></i> shell 流程控制
               </a>
             
           </div>
@@ -441,8 +461,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/14/什么是shell/" rel="prev" title="什么是shell">
-                什么是shell <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/14/Block解析/" rel="prev" title="Block详细解析">
+                Block详细解析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -605,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#使用运行时获取类的属性，通过KVC访问类的内部属性。"><span class="nav-number">1.</span> <span class="nav-text">使用运行时获取类的属性，通过KVC访问类的内部属性。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#shell-函数"><span class="nav-number">1.</span> <span class="nav-text">shell 函数</span></a></li></ol></div>
             
 
           </div>
@@ -777,9 +797,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://aipinn.com/2018/04/28/KVC访问类的属性/';
-          this.page.identifier = '2018/04/28/KVC访问类的属性/';
-          this.page.title = 'KVC、运行时结合访问类的属性';
+          this.page.url = 'http://aipinn.com/2018/07/16/shell函数/';
+          this.page.identifier = '2018/07/16/shell函数/';
+          this.page.title = 'shell函数';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://pinn.disqus.com/embed.js';
