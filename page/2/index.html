@@ -287,6 +287,143 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/04/25/setObject和setValue的区别/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pinn">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avator.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pinnの小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/25/setObject和setValue的区别/" itemprop="url">字典的setObject与setValue的区别</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-25T10:23:43+08:00">
+                2018-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/25/setObject和setValue的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/04/25/setObject和setValue的区别/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Send -setObject:forKey: to the receiver, unless the value is nil, in which case send -removeObjectForKey:.</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">- (<span class="keyword">void</span>)setValue:(<span class="keyword">nullable</span> ObjectType)value forKey:(<span class="built_in">NSString</span> *)key;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)setObject:(ObjectType)anObject forKey:(KeyType &lt;<span class="built_in">NSCopying</span>&gt;)aKey;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>setObject：forkey：中value不可以为nil，不然会报错。<br>setValue：forKey：中value可以为nil，但是当value为nil的时候，会自动调用removeObject：forKey方法</li>
+<li>setValue：forKey：中key的参数只能是NSString类型，而setObject：forKey：的key可以是任何对象类型</li>
+<li>两者中key都不可以为nil，可以为空字符串@“”</li>
+<li>setObject：forKey：中key必选遵守NSCopying协议</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/04/24/BOOL引起的问题/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -606,7 +743,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -628,7 +765,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
