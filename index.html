@@ -287,6 +287,157 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/11/29/Cocoapods的基本使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pinn">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avator.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pinnの小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/29/Cocoapods的基本使用/" itemprop="url">Untitled</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-29T21:49:35+08:00">
+                2018-11-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/11/29/Cocoapods的基本使用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/11/29/Cocoapods的基本使用/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>title: CocoaPods基本使用<br>date: 2018-10-20 11:30:48<br>tags: </p>
+<ul>
+<li>CocoaPods<br>comments: true<br>categories:CocoaPods<h1 id="CocoaPods基本使用"><a href="#CocoaPods基本使用" class="headerlink" title="CocoaPods基本使用"></a>CocoaPods基本使用</h1></li>
+</ul>
+<h3 id="官网使用指南"><a href="#官网使用指南" class="headerlink" title="官网使用指南"></a>官网<a href="https://guides.cocoapods.org" target="_blank" rel="noopener">使用指南</a></h3><h3 id="Pod安装"><a href="#Pod安装" class="headerlink" title="Pod安装"></a>Pod安装</h3><ul>
+<li>推荐使用<a href="https://brew.sh" target="_blank" rel="noopener">Homebrew</a>一建快速安装，基本无坑。</li>
+<li>安装CocoaPod <a href="https://cocoapods.org/app" target="_blank" rel="noopener">APP</a></li>
+<li>其他安装方式请自行百度</li>
+</ul>
+<h3 id="Podfile文件"><a href="#Podfile文件" class="headerlink" title="Podfile文件"></a>Podfile文件</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># open source 开源代码Specs路径</span></span><br><span class="line">source <span class="string">'https://github.com/CocoaPods/Specs.git'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># my work 可以指定私有Specs路径</span></span><br><span class="line">source <span class="string">'https://github.com/Artsy/Specs.git'</span></span><br><span class="line"></span><br><span class="line">target <span class="string">'App'</span> <span class="keyword">do</span></span><br><span class="line"></span><br><span class="line">  pod <span class="string">'Artsy+UIColors'</span></span><br><span class="line">  pod <span class="string">'Artsy+UIButtons'</span></span><br><span class="line"></span><br><span class="line">  pod <span class="string">'FLKAutoLayout'</span></span><br><span class="line">  pod <span class="string">'ISO8601DateFormatter'</span>, <span class="string">'0.7'</span></span><br><span class="line">  pod <span class="string">'AFNetworking'</span>, <span class="string">'~&gt; 2.0'</span></span><br><span class="line"></span><br><span class="line">  target <span class="string">'AppTests'</span> <span class="keyword">do</span></span><br><span class="line">    inherit! <span class="symbol">:search_paths</span></span><br><span class="line">    pod <span class="string">'FBSnapshotTestCase'</span></span><br><span class="line">    pod <span class="string">'Quick'</span></span><br><span class="line">    pod <span class="string">'Nimble'</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<h3 id="Podfile-lock文件"><a href="#Podfile-lock文件" class="headerlink" title="Podfile.lock文件"></a>Podfile.lock文件</h3><p>包含引用的依赖的版本号等基本信息。</p>
+<h3 id="引用版本说明"><a href="#引用版本说明" class="headerlink" title="引用版本说明"></a>引用版本说明</h3><blockquote>
+<ol>
+<li>Besides no version, or a specific one, it is also possible to use logical operators:<br>‘&gt; 0.1’ Any version higher than 0.1<br>‘&gt;= 0.1’ Version 0.1 and any higher version<br>‘&lt; 0.1’ Any version lower than 0.1<br>‘&lt;= 0.1’ Version 0.1 and any lower version<br>…<br>2 .In addition to the logic operators CocoaPods has an optimistic operator ~&gt;:<br>‘~&gt; 0.1.2’ Version 0.1.2 and the versions up to 0.2, not including 0.2 and higher<br>‘~&gt; 0.1’ Version 0.1 and the versions up to 1.0, not including 1.0 and higher<br>‘~&gt; 0’ Version 0 and higher, this is basically the same as not having it.</li>
+</ol>
+</blockquote>
+<h3 id="pod简单使用"><a href="#pod简单使用" class="headerlink" title="pod简单使用"></a>pod简单使用</h3><ul>
+<li>cd到指定工程目录执行<code>pod install</code>。<br>  第一次install会下载Cocoapods的公有<a href="https://github.com/CocoaPods/Specs" target="_blank" rel="noopener">Specs</a>到本地<code>~/.cocoapods/repos/</code>目录下。<code>master/Specs/</code>下包含所有开源并支持cocoapods的 <code>.podspec</code>文件。pod install命令会在此目录下搜索podfile文件指定的开源代码的podspec文件（一般会被转化为json文件），然后解析该文件并到指定的路径下载开源代码。</li>
+<li><code>pod update</code> NAME 更新指定的库到最新版本,不受Podfile.lock文件的版本限制。</li>
+<li><code>pod update</code> 根据Podfile.lock更新所有pods库。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/08/15/Grand Central Dispatch -- GCD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1747,168 +1898,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/04/28/KVC访问类的属性/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Pinn">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/avator.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Pinnの小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/28/KVC访问类的属性/" itemprop="url">KVC、运行时结合访问类的属性</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-28T12:15:24+08:00">
-                2018-04-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Objective-C/" itemprop="url" rel="index">
-                    <span itemprop="name">Objective-C</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/04/28/KVC访问类的属性/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/04/28/KVC访问类的属性/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote>
-<p>引入运行时头文件</p>
-<p>#import &lt;objc/runtime.h&gt;</p>
-<p>#import &lt;objc/objc.h&gt;</p>
-</blockquote>
-<h6 id="使用运行时获取类的属性，通过KVC访问类的内部属性。"><a href="#使用运行时获取类的属性，通过KVC访问类的内部属性。" class="headerlink" title="使用运行时获取类的属性，通过KVC访问类的内部属性。"></a>使用运行时获取类的属性，通过KVC访问类的内部属性。</h6>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/04/28/KVC访问类的属性/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1963,7 +1952,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
