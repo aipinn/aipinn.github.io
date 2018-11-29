@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="简体中文">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Docker,GitLab," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="macos+Docker+GitLab  构建本地Git服务1. 安装Docker安装方式：  推荐通过Homebrew安装，homebrew 手动安装dmg，官网 Docker镜像仓库地址    1234567891011emoji:~ penn$ brew search docker==&amp;gt; Formulaedocker                                doc">
+<meta name="keywords" content="Docker,GitLab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="macos+Docker+GitLab 构建本地Git服务">
+<meta property="og:url" content="http://aipinn.com/2018/10/26/macos+Docker+GitLab  构建本地Git服务/index.html">
+<meta property="og:site_name" content="Pinnの小站">
+<meta property="og:description" content="macos+Docker+GitLab  构建本地Git服务1. 安装Docker安装方式：  推荐通过Homebrew安装，homebrew 手动安装dmg，官网 Docker镜像仓库地址    1234567891011emoji:~ penn$ brew search docker==&amp;gt; Formulaedocker                                doc">
+<meta property="og:locale" content="简体中文">
+<meta property="og:image" content="http://aipinn.com/2018/10/26/macos+Docker+GitLab%20%20构建本地Git服务/media/15416427354299/Snip20181108_2.png">
+<meta property="og:image" content="http://aipinn.com/2018/10/26/macos+Docker+GitLab%20%20构建本地Git服务/media/15416427354299/Snip20181108_1.png">
+<meta property="og:image" content="http://aipinn.com/2018/10/26/macos+Docker+GitLab%20%20构建本地Git服务/media/15416427354299/Snip20181108_3.png">
+<meta property="og:updated_time" content="2018-11-29T14:34:51.795Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="macos+Docker+GitLab 构建本地Git服务">
+<meta name="twitter:description" content="macos+Docker+GitLab  构建本地Git服务1. 安装Docker安装方式：  推荐通过Homebrew安装，homebrew 手动安装dmg，官网 Docker镜像仓库地址    1234567891011emoji:~ penn$ brew search docker==&amp;gt; Formulaedocker                                doc">
+<meta name="twitter:image" content="http://aipinn.com/2018/10/26/macos+Docker+GitLab%20%20构建本地Git服务/media/15416427354299/Snip20181108_2.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://aipinn.com/2018/10/26/macos+Docker+GitLab  构建本地Git服务/"/>
+
+
+
+
+
+  <title>macos+Docker+GitLab 构建本地Git服务 | Pinnの小站</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?d2b7d429530ebbc43227f63a61f87190";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="简体中文">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Pinnの小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Pinn:如何证明你有自我意识</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            Commonweal 404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://aipinn.com/2018/10/26/macos+Docker+GitLab  构建本地Git服务/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Pinn">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avator.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Pinnの小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">macos+Docker+GitLab 构建本地Git服务</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-26T19:40:35+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/10/26/macos+Docker+GitLab  构建本地Git服务/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/10/26/macos+Docker+GitLab  构建本地Git服务/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="macos-Docker-GitLab-构建本地Git服务"><a href="#macos-Docker-GitLab-构建本地Git服务" class="headerlink" title="macos+Docker+GitLab  构建本地Git服务"></a>macos+Docker+GitLab  构建本地Git服务</h1><h3 id="1-安装Docker"><a href="#1-安装Docker" class="headerlink" title="1. 安装Docker"></a>1. 安装Docker</h3><p>安装方式：</p>
+<ol>
+<li>推荐通过Homebrew安装，<a href="https://brew.sh" target="_blank" rel="noopener">homebrew</a></li>
+<li>手动安装dmg，<a href="https://docs.docker.com/docker-for-mac/install/" target="_blank" rel="noopener">官网</a><ul>
+<li><a href="https://hub.docker.com" target="_blank" rel="noopener">Docker镜像仓库地址</a></li>
+</ul>
+</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">emoji:~ penn$ brew search docker</span><br><span class="line">==&gt; Formulae</span><br><span class="line">docker                                docker-compose                        docker-gen                            docker-machine-driver-hyperkit        docker-machine-parallels</span><br><span class="line">docker-clean                          docker-compose-completion             docker-ls                             docker-machine-driver-vultr           docker-squash</span><br><span class="line">docker-cloud                          docker-credential-helper              docker-machine                        docker-machine-driver-xhyve           docker-swarm</span><br><span class="line">docker-completion                     docker-credential-helper-ecr          docker-machine-completion             docker-machine-nfs                    docker2aci</span><br><span class="line"></span><br><span class="line">==&gt; Casks</span><br><span class="line">docker                                                          docker-edge                                                     docker-toolbox</span><br><span class="line">emoji:~ penn$  brew cask install docker</span><br><span class="line">...........</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="2-在Docker容器中安装gitlab-ce容器"><a href="#2-在Docker容器中安装gitlab-ce容器" class="headerlink" title="2. 在Docker容器中安装gitlab-ce容器"></a>2. 在Docker容器中安装gitlab-ce容器</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">emoji:~ penn$ docker search gitlab</span><br><span class="line">NAME                                         DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED</span><br><span class="line">gitlab/gitlab-ce                             GitLab Community Edition docker image based …   2203                                    [OK]</span><br><span class="line">sameersbn/gitlab                             Dockerized gitlab web server                    1071                                    [OK]</span><br><span class="line">.............</span><br><span class="line"><span class="meta">#</span> ce（Community Edition）代表社区版, lastest代表最新版本，默认</span><br><span class="line">emoji:~ penn$ docker pull gitlab-ce:lastest</span><br><span class="line">.............</span><br></pre></td></tr></table></figure>
+<h3 id="3-启动容器"><a href="#3-启动容器" class="headerlink" title="3. 启动容器"></a>3. 启动容器</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">emoji:~ penn$ docker run -d -p 443:443 -p 80:80 -p 22:22 \</span><br><span class="line">--name gitlab --restart always  \</span><br><span class="line">--volume /Users/***/gitlab/config:/etc/gitlab \</span><br><span class="line">--volume /Users/***/gitlab/logs:/var/log/gitlab \</span><br><span class="line">--volume /Users/***/gitlab/data:/var/opt/gitlab \</span><br><span class="line">gitlab/gitlab-ce</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>把主机的 443、80、22 端口直接转发到Docker容器;<br>–volume /Users/xxx/gitlab/config:/etc/gitlab 、<br>–volume /Users/xxx/gitlab/logs:/var/log/gitlab 、<br>–volume /Users/xxx/gitlab/data:/var/opt/gitlab<br>这三个参数表示将 gitlab 的配置、日志和数据持久化到主机文件系统上来。</p>
+</li>
+<li><p>启动成功后可以通过docker ps查看当前在docker运行的容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">emoji:~ penn$ docker ps</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                       PORTS                                                          NAMES</span><br><span class="line">c039e4c23176        gitlab/gitlab-ce    "/assets/wrapper"   About an hour ago   Up About an hour (healthy)   0.0.0.0:22-&gt;22/tcp, 0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp   gitlab</span><br><span class="line">emoji:~ penn$</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="4-配置gitlab"><a href="#4-配置gitlab" class="headerlink" title="4. 配置gitlab"></a>4. 配置gitlab</h3><h5 id="登录gitlab"><a href="#登录gitlab" class="headerlink" title="登录gitlab"></a>登录gitlab</h5><p>访问<a href="127.0.0.1:80" target="_blank" rel="noopener">127.0.0.1:80</a>即可进入gitlab的访问界面。设置好密码会跳转到登录界面，默认用户名为root。</p>
+<h5 id="创建组"><a href="#创建组" class="headerlink" title="创建组"></a>创建组</h5><p>gitlab有三类对象：group（组）、people（用户）、project（项目）<br>创建好组设置好组权限，再创建用户添加到组即可使用户拥有相应的权限。</p>
+<h5 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h5><p>至此，还不能发送邮件，需要手动为用户添加密码，用户第一次登录后系统会强制用户修改。管理员为新添加的用户设置密码步骤如下：<br>Admin area –&gt;User –&gt;Edit 进入界面</p>
+<p><img src="media/15416427354299/Snip20181108_2.png" alt="Snip20181108_2"></p>
+<p><img src="media/15416427354299/Snip20181108_1.png" alt="Snip20181108_1"></p>
+<p><img src="media/15416427354299/Snip20181108_3.png" alt="Snip20181108_3"></p>
+<h5 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h5><p>在对应的组中New Project即可创建项目。</p>
+<h5 id="添加SSH-Keys"><a href="#添加SSH-Keys" class="headerlink" title="添加SSH Keys"></a>添加SSH Keys</h5><p>用户登录系统后，会看到提示：<br><strong>You won’t be able to pull or push project code via SSH until you add an SSH key to your profile</strong><br>打开项目设置，添加SSH Keys，根据网页提示新建或者添加现有的key。</p>
+<h5 id="clone项目"><a href="#clone项目" class="headerlink" title="clone项目"></a>clone项目</h5><p>至此，用户可以push和pull，对拥有的项目进行修改。<br><strong>注意：</strong><br>使用SSH地址 clone项目时：git@c039e4c23176:test/testproject-slug.git中c039e4c23176是gitlab在docker中的容器ID，需要换成本机地址;<br>即：git clone <a href="mailto:git@127.0.0.1" target="_blank" rel="noopener">git@127.0.0.1</a>:test/testproject-slug.git</p>
+<h3 id="5-over"><a href="#5-over" class="headerlink" title="5.over~~~~"></a>5.over<del>~</del>~~~</h3>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>起风了，您的支持将鼓励我继续创作!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/uploads/wechat.jpeg" alt="Pinn WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/uploads/alipay.jpeg" alt="Pinn Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
+            <a href="/tags/GitLab/" rel="tag"># GitLab</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/23/Cocoapods创建私有库（二）/" rel="next" title="Cocoapods创建私有Specs(一)">
+                <i class="fa fa-chevron-left"></i> Cocoapods创建私有Specs(一)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/28/Jenkins-Tips/" rel="prev" title="Jenkins 小结">
+                Jenkins 小结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avator.gif"
+                alt="Pinn" />
+            
+              <p class="site-author-name" itemprop="name">Pinn</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/aipinn" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#macos-Docker-GitLab-构建本地Git服务"><span class="nav-number">1.</span> <span class="nav-text">macos+Docker+GitLab  构建本地Git服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Docker"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 安装Docker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-在Docker容器中安装gitlab-ce容器"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 在Docker容器中安装gitlab-ce容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-启动容器"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 启动容器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-配置gitlab"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. 配置gitlab</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#登录gitlab"><span class="nav-number">1.0.4.0.1.</span> <span class="nav-text">登录gitlab</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建组"><span class="nav-number">1.0.4.0.2.</span> <span class="nav-text">创建组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建用户"><span class="nav-number">1.0.4.0.3.</span> <span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#创建项目"><span class="nav-number">1.0.4.0.4.</span> <span class="nav-text">创建项目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#添加SSH-Keys"><span class="nav-number">1.0.4.0.5.</span> <span class="nav-text">添加SSH Keys</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#clone项目"><span class="nav-number">1.0.4.0.6.</span> <span class="nav-text">clone项目</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-over"><span class="nav-number">1.0.5.</span> <span class="nav-text">5.over~~~~</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pinn</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://pinn.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://aipinn.com/2018/10/26/macos+Docker+GitLab  构建本地Git服务/';
+          this.page.identifier = '2018/10/26/macos+Docker+GitLab  构建本地Git服务/';
+          this.page.title = 'macos+Docker+GitLab 构建本地Git服务';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://pinn.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
